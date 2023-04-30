@@ -1,7 +1,7 @@
 # dex编译(dex2oat)
 
 [![Magisk](https://img.shields.io/badge/Magisk-green?style=flat&logo=Magisk&logoColor=white)](https://github.com/topjohnwu/Magisk)
-[![Version](https://img.shields.io/github/v/tag/SomesakiKaede/Dex2oatRUN?label=版本)](https://github.com/SomesakiKaede/Dex2oatRUN/releases/latest)
+[![Version](https://img.shields.io/github/tag/SomesakiKaede/Dex2oatRUN?label=版本)](https://github.com/SomesakiKaede/Dex2oatRUN/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/SomesakiKaede/Dex2oatRUN/total?label=下载)](https://github.com/SomesakiKaede/Dex2oatRUN/releases)
 [![Coolapk](https://img.shields.io/badge/作者酷安-柊疏柚-orange)](http://www.coolapk.com/u/11696005)
 
