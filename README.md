@@ -13,7 +13,7 @@ dalvik excutable file to optimized art file，它是一个对 android系统下�
 
 ## 配置
 
-- 配置及日志相关都在此文件夹下：`/data/adb/Dex2oatRUN`。
+- 配置及日志相关都在此文件夹下：`/data/adb/Dex2oatRUN`
 
 ---
 
