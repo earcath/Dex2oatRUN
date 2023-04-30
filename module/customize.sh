@@ -3,10 +3,10 @@ OPTIONALAPP_CONFIG="/data/adb/Dex2oatRUN/自选应用列表.prop"
 
 #创建配置文件
 mkdir /data/adb/Dex2oatRUN
-if [ ! -d $DEX2OAT_CONFIG ]; then
+if [ ! -f $DEX2OAT_CONFIG ]; then
 	touch $DEX2OAT_CONFIG
 fi
-if [ ! -d $OPTIONALAPP_CONFIG ]; then
+if [ ! -f $OPTIONALAPP_CONFIG ]; then
 	touch $OPTIONALAPP_CONFIG
 fi
 touch /data/adb/Dex2oatRUN/删除编译内容.sh
@@ -20,7 +20,7 @@ timing_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时运行=" | cut -
 Optionalapp=$(cat $OPTIONALAPP_CONFIG | grep -v '^#')
 
 #写入配置
-if [ ! -d /data/adb/modules/Dex2oatRUN/service.sh ]; then
+if [ ! -f $DEX2OAT_CONFIG ]; then
 echo "#基础配置：
 #可填：
 #无、verify、quicken、space-profile、space、speed-profile、speed、everything
@@ -32,11 +32,10 @@ echo "#基础配置：
 开机运行=否
 定时运行=是
 " >"$DEX2OAT_CONFIG"
-
-echo "#自选应用列表（填包名，一行一个）
+echo "#自选应用列表（填包名，一行一个）：
 " >"$OPTIONALAPP_CONFIG"
 else
-echo "#基础配置
+echo "#基础配置：
 #可填：
 #无、verify、quicken、space-profile、space、speed-profile、speed、everything
 #越往后性能越好，占用空间越大。
@@ -47,11 +46,13 @@ echo "#基础配置
 开机运行=$boot_operation
 定时运行=$timing_operation
 " >"$DEX2OAT_CONFIG"
-
-echo "#dex2oat自选应用配置（填包名，一行一个）
+echo "#自选列表（填包名，一行一个）：
 $Optionalapp
 " >"$OPTIONALAPP_CONFIG"
 fi
+
+ui_print "- 模块会根据配置自动执行dex2oat。"
+ui_print "- 配置及日志文件都在此文件夹下：/data/adb/Dex2oatBOOT"
 
 cp $MODPATH/删除编译内容.sh /data/adb/Dex2oatRUN/删除编译内容.sh
 

@@ -12,19 +12,22 @@ function read_config(){	#读取配置
 function run_dex2oat(){	#运行
 	if [ "$system_app" != "无" ]; then
 		source $MODDIR/mode/sapp.sh
-	elif [ "$tripartite_app" != "无" ]; then
+	fi
+	if [ "$tripartite_app" != "无" ]; then
 		source $MODDIR/mode/3app.sh
-	elif [ "$optional_app" != "无" ]; then
+	fi
+	if [ "$optional_app" != "无" ]; then
 		source $MODDIR/mode/oapp.sh
-	else
+	fi
+	if [[ "$system_app" = "无" && "$tripartite_app" = "无" && "$optional_app" = "无" ]]; then
 		log "W" "未选择应用！"
 	fi
 }
 
 function notification_simulation(){	#通知提醒
-	local title="${2}"
-	local text="${1}"
-	su -lp 2000 -c "cmd notification post -S messaging --conversation '${title}' --message 'dex2oat':'${text}' 'Tag' '$(echo $RANDOM)' " >/dev/null 2>&1
+	local title="${1}"
+	local text="${2}"
+	su -lp 2000 -c "cmd notification post -S messaging --conversation '${title}' --message '':'${text}' 'Tag' '$(echo $RANDOM)' " >/dev/null 2>&1
 }
 
 function log(){	#日志
