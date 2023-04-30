@@ -4,8 +4,8 @@
 [![Commit](https://img.shields.io/github/last-commit/SomesakiKaede/Dex2oatRUN?label=最后更新)](https://github.com/SomesakiKaede/Dex2oatRUN/releases)
 [![Version](https://img.shields.io/github/tag/SomesakiKaede/Dex2oatRUN?label=版本)](https://github.com/SomesakiKaede/Dex2oatRUN/releases/latest)
 [![Stars](https://img.shields.io/github/stars/SomesakiKaede/Dex2oatRUN?label=Github%20Stars&logo=github&style=flat "GitHub Repo stars")](https://github.com/SomesakiKaede/Dex2oatRUN)
-
 [![Downloads](https://img.shields.io/github/downloads/SomesakiKaede/Dex2oatRUN/total?label=Github下载&logo=github)](https://github.com/SomesakiKaede/Dex2oatRUN/releases)
+
 [![Coolapk](https://img.shields.io/badge/酷安-柊疏柚-hotpink?logo=android)](http://www.coolapk.com/u/11696005)
 
 > dalvik excutable file to optimized art file，它是一个对 android系统下的dex文件，进行编译优化的程序。通过dex2oat的编译优化，可以大大的提高android系统的启动的速度和使用手机过程的的流畅度。
