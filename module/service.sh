@@ -5,7 +5,7 @@ boot_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^开机运行=" | cut -f2
 timing_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时运行=" | cut -f2 -d '=')
 
 if [ "$boot_operation" = "是" ]; then
-	sleep 0
+	sleep 90
 	sh $MODDIR/common.sh
 fi
 if [ "$timing_operation" = "是" ]; then
