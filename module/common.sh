@@ -10,6 +10,8 @@ function read_config(){	#读取配置
 }
 
 function run_dex2oat(){	#运行
+	log "I" "开始编译！"
+	log "D" "当前配置信息： 系统应用=$system_app； 三方应用=$tripartite_app； 自选应用=$optional_app"
 	if [ "$system_app" != "无" ]; then
 		source $MODDIR/mode/sapp.sh
 	fi
@@ -31,15 +33,11 @@ function notification_simulation(){	#通知提醒
 }
 
 function log(){	#日志
-	echo "$(date "+%Y-%m-%d %H:%M:%S") [${1}] : ${2}"
+	echo "$(date "+%Y-%m-%d %H:%M:%S") [${1}] : ${2}" >>/data/adb/Dex2oatRUN/日志.log 2>&1
 }
 
-find /data/adb/Dex2oatRUN/日志.log -type f -size +10k -delete
+find /data/adb/Dex2oatRUN/日志.log -type f -size +100k -delete
 read_config
-log "D" "当前配置信息：
-系统应用=$system_app；三方应用=$tripartite_app；自选应用=$optional_app"
-log "I" "开始编译！"
 run_dex2oat
-log "I" "编译完成！"
 notification_simulation "dex2oat模块" "编译完成！"
 
