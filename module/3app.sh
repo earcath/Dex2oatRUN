@@ -1,3 +1,7 @@
+function log(){	#日志
+	echo "$(date "+%Y-%m-%d %H:%M:%S") [${1}] : ${2}" >>/data/adb/Dex2oatRUN/日志.log
+}
+
 Package=$(pm list packages -3 | grep "^package:" | cut -f2 -d ':')
 
 if [ "$tripartite_app" = "verify" ]; then

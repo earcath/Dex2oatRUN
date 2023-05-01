@@ -1,3 +1,7 @@
+function log(){	#日志
+	echo "$(date "+%Y-%m-%d %H:%M:%S") [${1}] : ${2}" >>/data/adb/Dex2oatRUN/日志.log
+}
+
 Package=$(cat $OPTIONALAPP_CONFIG | grep -v '^#')
 
 if [ "$optional_app" = "verify" ]; then

@@ -33,7 +33,7 @@ function notification_simulation(){	#通知提醒
 }
 
 function log(){	#日志
-	echo "$(date "+%Y-%m-%d %H:%M:%S") [${1}] : ${2}" >>/data/adb/Dex2oatRUN/日志.log 2>&1
+	echo "$(date "+%Y-%m-%d %H:%M:%S") [${1}] : ${2}" >>/data/adb/Dex2oatRUN/日志.log
 }
 
 find /data/adb/Dex2oatRUN/日志.log -type f -size +100k -delete
