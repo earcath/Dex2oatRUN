@@ -5,8 +5,8 @@ boot_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^开机运行=" | cut -f2
 timing_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时运行=" | cut -f2 -d '=')
 
 if [ "$boot_operation" = "是" ]; then
-	sleep 30
-	sh $MODDIR/common.sh >>/data/adb/Dex2oatRUN/日志.log 2>&1 &
+	sleep 0
+	sh $MODDIR/common.sh
 fi
 if [ "$timing_operation" = "是" ]; then
 	export PATH="/system/bin:/system/xbin:/vendor/bin:$(magisk --path)/.magisk/busybox:$PATH"
