@@ -20,7 +20,7 @@ timing_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时运行=" | cut -
 Optionalapp=$(cat $OPTIONALAPP_CONFIG | grep -v '^#')
 
 #写入配置
-if [ ! -f $DEX2OAT_CONFIG ]; then
+if [ ! -f /data/adb/Dex2oatRUN/ ]; then
 echo "#基础配置：
 #可填：
 #无、verify、quicken、space-profile、space、speed-profile、speed、everything
