@@ -1,5 +1,5 @@
 
-## dex编译(dex2oat) v2.0.1.beta5(5)
+## dex编译(dex2oat) v2.0.1.beta6(6)
 
 ---
 
