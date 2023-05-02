@@ -1,7 +1,7 @@
 {
-  "versionCode": 8,
-  "version": "2.0.1.beta8",
-  "zipUrl": "https://github.com/SomesakiKaede/Dex2oatRUN/releases/download/2.0.1.beta8/dex.dex2oat.zip",
+  "versionCode": 10,
+  "version": "2.0.1.release",
+  "zipUrl": "https://github.com/SomesakiKaede/Dex2oatRUN/releases/download/2.0.1.release/dex.dex2oat.zip",
   "changelog": "https://raw.githubusercontent.com/SomesakiKaede/Dex2oatRUN/main/changelog.md"
 }
 
