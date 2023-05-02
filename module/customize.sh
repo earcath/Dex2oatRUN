@@ -9,8 +9,16 @@ fi
 if [ ! -f $OPTIONALAPP_CONFIG ]; then
 	touch $OPTIONALAPP_CONFIG
 fi
+
 touch /data/adb/Dex2oatRUN/删除编译内容.sh
 cp $MODPATH/删除编译内容.sh /data/adb/Dex2oatRUN/删除编译内容.sh
+oldp=$(pm list packages)
+oldi=$(getprop ro.system.build.id)
+mkdir $MODPATH/compare
+touch $MODPATH/compare/old.list
+touch $MODPATH/compare/old.id
+echo $oldp >$MODPATH/compare/old.list
+echo $oldi >$MODPATH/compare/old.id
 
 #读取旧配置
 system_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^系统应用=" | cut -f2 -d '=')

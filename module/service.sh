@@ -11,7 +11,9 @@ echo "$(date "+%Y-%m-%d %H:%M:%S") [I] : ----------设备已开机----------" >>
 
 if [ "$boot_operation" = "是" ]; then
 	echo "$(date "+%Y-%m-%d %H:%M:%S") [D] : ----------开机运行已开启----------" >>/data/adb/Dex2oatRUN/日志.log
-	sleep 90
+	sleep 60
+	sh $MODDIR/compare.sh
+	sleep 60
 	sh $MODDIR/common.sh
 fi
 if [ "$timing_operation" = "是" ]; then

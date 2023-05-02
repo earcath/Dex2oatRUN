@@ -61,10 +61,24 @@ function counter_increase(){	#计数
 	echo $count >$MODDIR/执行次数.txt
 }
 
+function deleteOK(){
+	rm -rf $MODDIR/compare/OK
+}
+
+function end(){
+	ends=$(grep -o '编译成功' /data/adb/Dex2oatRUN/日志.log | wc -l)
+	endf=$(grep -o '编译失败' /data/adb/Dex2oatRUN/日志.log | wc -l)
+	log "I" "----------本次运行结果：成功：$ends；失败：$endf----------"
+}
+
+if [ -f $MODDIR/compare/OK ]; then
 log_size
 counter
 read_config
 run_dex2oat
 notification_simulation "dex2oat模块" "编译完成！"
 counter_increase
+deleteOK
+end
+fi
 
