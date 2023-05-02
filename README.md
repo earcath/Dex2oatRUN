@@ -1,6 +1,6 @@
 # dex编译(dex2oat)
 
-[![Magisk](https://img.shields.io/badge/Magisk-blue?style=flat&logo=magisk&colour=white)](https://github.com/topjohnwu/Magisk)
+[![Magisk](https://img.shields.io/badge/Magisk-blue?style=flat&logo=magisk&logoColor=white)](https://github.com/topjohnwu/Magisk)
 [![Commit](https://img.shields.io/github/last-commit/SomesakiKaede/Dex2oatRUN?label=最后更新)](https://github.com/SomesakiKaede/Dex2oatRUN/releases)
 [![Version](https://img.shields.io/github/tag/SomesakiKaede/Dex2oatRUN?label=版本)](https://github.com/SomesakiKaede/Dex2oatRUN/releases/latest)
 [![Stars](https://img.shields.io/github/stars/SomesakiKaede/Dex2oatRUN?label=Github%20Stars&logo=github&style=flat "GitHub Repo stars")](https://github.com/SomesakiKaede/Dex2oatRUN)
