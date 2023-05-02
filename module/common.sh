@@ -11,18 +11,23 @@ function read_config(){	#读取配置
 
 function run_dex2oat(){	#运行
 	log "I" "----------开始第$count次运行！----------"
-	log "D" "----------当前配置信息： 系统应用=$system_app； 三方应用=$tripartite_app； 自选应用=$optional_app----------"
 	if [ "$system_app" != "无" ]; then
-		log "I" "----------开始编译系统应用----------"
+		log "D" "----------系统应用编译模式：$system_app----------"
+		log "I" "----------开始编译系统应用！----------"
 		source $MODDIR/mode/sapp.sh
+		log "I" "----------系统应用编译完毕！----------
 	fi
 	if [ "$tripartite_app" != "无" ]; then
-		log "I" "----------开始编译三方应用----------"
+		log "D" "----------三方应用编译模式：$tripartite_app----------"
+		log "I" "----------开始编译三方应用！----------"
 		source $MODDIR/mode/3app.sh
+		log "I" "----------三方应用编译完毕！----------"
 	fi
 	if [ "$optional_app" != "无" ]; then
-		log "I" "----------开始编译自选应用----------"
+		log "D" "----------自选应用编译模式：$optional_app----------"
+		log "I" "----------开始编译自选应用！----------"
 		source $MODDIR/mode/oapp.sh
+		log "I" "----------自选应用编译完毕！----------"
 	fi
 	if [[ "$system_app" = "无" && "$tripartite_app" = "无" && "$optional_app" = "无" ]]; then
 		log "W" "----------未选择应用！----------"

@@ -9,7 +9,7 @@ if [ "$optional_app" = "verify" ]; then
 		do
 			cmd package compile -m verify $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译完成！"
+				log "I" "应用$i编译成功！"
 			else
 				log "E" "应用$i编译失败！"
 			fi
@@ -19,7 +19,7 @@ elif [ "$optional_app" = "quicken" ]; then
 		do
 			cmd package compile -m quicken $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译完成！"
+				log "I" "应用$i编译成功！"
 			else
 				log "E" "应用$i编译失败！"
 			fi
@@ -29,7 +29,7 @@ elif [ "$optional_app" = "space-profile" ]; then
 		do
 			cmd package compile -m space-profile $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译完成！"
+				log "I" "应用$i编译成功！"
 			else
 				log "E" "应用$i编译失败！"
 			fi
@@ -39,7 +39,7 @@ elif [ "$optional_app" = "space" ]; then
 		do
 			cmd package compile -m space $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译完成！"
+				log "I" "应用$i编译成功！"
 			else
 				log "E" "应用$i编译失败！"
 			fi
@@ -49,7 +49,7 @@ elif [ "$optional_app" = "speed-profile" ]; then
 		do
 			cmd package compile -m speed-profile $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译完成！"
+				log "I" "应用$i编译成功！"
 			else
 				log "E" "应用$i编译失败！"
 			fi
@@ -59,7 +59,7 @@ elif [ "$optional_app" = "speed" ]; then
 		do
 			cmd package compile -m speed $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译完成！"
+				log "I" "应用$i编译成功！"
 			else
 				log "E" "应用$i编译失败！"
 			fi
@@ -69,7 +69,7 @@ elif [ "$optional_app" = "everything" ]; then
 		do
 			cmd package compile -m everything $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译完成！"
+				log "I" "应用$i编译成功！"
 			else
 				log "E" "应用$i编译失败！"
 			fi
