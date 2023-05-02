@@ -33,7 +33,7 @@ function start_compare(){
 		log "I" "----------更新了系统----------"
 	fi
 	if [ -f $MODDIR/compare/OK ]; then
-	log "I" "----------但是刚安装完模块----------"
+		log "I" "----------但是刚安装完模块----------"
 	fi
 }
 
