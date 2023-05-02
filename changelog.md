@@ -1,10 +1,11 @@
 
-## dex编译(dex2oat) v2.0.1.beta8(8)
+## dex编译(dex2oat) v2.0.1.release(10)
 
 ---
 
 # 变化
 
+- 正式版发布。
 - 优化日志系统。
 - 优化开机执行。
 - 优化代码，优化配置。
@@ -19,7 +20,7 @@
 
 ---
 
-# 提示
+# 关于
 
 - 作者：[酷安@柊疏柚](http://www.coolapk.com/u/11696005) [GitHub@染崎枫](https://github.com/SomesakiKaede)
 
