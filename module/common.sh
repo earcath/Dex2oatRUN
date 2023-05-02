@@ -15,7 +15,7 @@ function run_dex2oat(){	#运行
 		log "D" "----------系统应用编译模式：$system_app----------"
 		log "I" "----------开始编译系统应用！----------"
 		source $MODDIR/mode/sapp.sh
-		log "I" "----------系统应用编译完毕！----------
+		log "I" "----------系统应用编译完毕！----------"
 	fi
 	if [ "$tripartite_app" != "无" ]; then
 		log "D" "----------三方应用编译模式：$tripartite_app----------"
