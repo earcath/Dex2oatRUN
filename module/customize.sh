@@ -19,6 +19,7 @@ touch $MODPATH/compare/old.list
 touch $MODPATH/compare/old.id
 echo $oldp >$MODPATH/compare/old.list
 echo $oldi >$MODPATH/compare/old.id
+touch $MODPATH/compare/OK
 
 #读取旧配置
 system_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^系统应用=" | cut -f2 -d '=')

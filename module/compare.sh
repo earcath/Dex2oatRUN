@@ -32,6 +32,9 @@ function start_compare(){
 		echo $newi >$MODDIR/compare/old.id
 		log "I" "----------更新了系统----------"
 	fi
+	if [ -f $MODDIR/compare/OK ]; then
+	log "I" "----------但是刚安装完模块----------"
+	fi
 }
 
 read_config
