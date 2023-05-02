@@ -75,6 +75,6 @@ elif [ "$optional_app" = "everything" ]; then
 			fi
 		done
 else
-	log "E" "配置输入有误！"
+	log "E" "----------配置输入有误！----------"
 fi
 
