@@ -1,3 +1,2 @@
-59 23 * * * sh ../compare.sh
 0 0 * * * sh ../common.sh
 

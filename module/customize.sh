@@ -3,23 +3,25 @@ OPTIONALAPP_CONFIG="/data/adb/Dex2oatRUN/自选应用列表.prop"
 
 #创建配置文件
 mkdir /data/adb/Dex2oatRUN
-if [ ! -f $DEX2OAT_CONFIG ]; then
-	touch $DEX2OAT_CONFIG
-fi
-if [ ! -f $OPTIONALAPP_CONFIG ]; then
-	touch $OPTIONALAPP_CONFIG
-fi
+touch $DEX2OAT_CONFIG
+touch $OPTIONALAPP_CONFIG
 
-touch /data/adb/Dex2oatRUN/删除编译内容.sh
-cp $MODPATH/删除编译内容.sh /data/adb/Dex2oatRUN/删除编译内容.sh
-oldp=$(pm list packages)
+
+touch /data/adb/Dex2oatRUN/删除编译内容（会闪退，不影响）.sh
+cp $MODPATH/删除编译内容.sh /data/adb/Dex2oatRUN/删除编译内容（会闪退，不影响）.sh
 oldi=$(getprop ro.system.build.id)
-mkdir $MODPATH/compare
-touch $MODPATH/compare/old.list
-touch $MODPATH/compare/old.id
-echo $oldp >$MODPATH/compare/old.list
-echo $oldi >$MODPATH/compare/old.id
-touch $MODPATH/compare/OK
+oldpa=$(pm list packages)
+oldp3=$(pm list packages -3)
+oldps=$(pm list packages -s)
+touch $MODPATH/old.id
+touch $MODDIR/old.lista
+touch $MODDIR/old.list3
+touch $MODDIR/old.lists
+echo $oldpa >$MODDIR/old.lista
+echo $oldp3 >$MODDIR/old.list3
+echo $olds >$MODDIR/old.lists
+echo $oldi >$MODPATH/old.id
+touch $MODPATH/安装或更新了模块
 
 #读取旧配置
 system_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^系统应用=" | cut -f2 -d '=')
@@ -27,6 +29,7 @@ tripartite_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^三方应用=" | cut -f2
 optional_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^自选应用=" | cut -f2 -d '=')
 boot_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^开机运行=" | cut -f2 -d '=')
 timing_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时运行=" | cut -f2 -d '=')
+run_time=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时执行时间=" | cut -f2 -d '=')
 Optionalapp=$(cat $OPTIONALAPP_CONFIG | grep -v '^#')
 
 #写入配置
@@ -40,8 +43,10 @@ echo "#基础配置：
 自选应用=无
 #运行模式：
 #填：是、否
-开机运行=否
+开机运行=是
 定时运行=是
+#定时服务的执行时间，前面是分，后面是时，例如12点： 00 12 记得空格。
+定时执行时间=00 00
 " >"$DEX2OAT_CONFIG"
 echo "#自选应用列表（填包名，一行一个）：
 " >"$OPTIONALAPP_CONFIG"
@@ -57,6 +62,8 @@ echo "#基础配置：
 #填：是、否
 开机运行=$boot_operation
 定时运行=$timing_operation
+#定时服务的执行时间，前面是分，后面是时，例如12点： 00 12 记得空格。
+定时执行时间=$run_time
 " >"$DEX2OAT_CONFIG"
 echo "#自选列表（填包名，一行一个）：
 $Optionalapp

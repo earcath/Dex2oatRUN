@@ -7,32 +7,79 @@ function read_config(){	#读取配置
 	system_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^系统应用=" | cut -f2 -d '=')
 	tripartite_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^三方应用=" | cut -f2 -d '=')
 	optional_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^自选应用=" | cut -f2 -d '=')
+	run_time=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时执行时间=" | cut -f2 -d '=')
+	newpa=$(pm list packages)
+	newp3=$(pm list packages -3)
+	newps=$(pm list packages -s)
+	newi=$(getprop ro.system.build.id)
+}
+
+function write_config(){
+	touch $MODDIR/new.lista
+	touch $MODDIR/new.list3
+	touch $MODDIR/new.lists
+	touch $MODDIR/new.id
+	echo $newpa >$MODDIR/new.lista
+	echo $newp3 >$MODDIR/new.list3
+	echo $news >$MODDIR/new.lists
+	echo $newi >$MODDIR/new.id
+	echo "$run_time * * * sh ../common.sh" >$MODDIR/cron.d/root
+}
+
+function start_compare(){
+	if [[ ! -z $(cmp $MODDIR/old.lista $MODDIR/new.lista) ]]; then
+		touch $MODDIR/change
+		echo $newpa >$MODDIR/old.lista
+	else
+		log "I" "*没有安装或卸载应用"
+		log "I" "*不执行编译"
+	fi
+	if [[ -z $(cmp $MODDIR/old.id $MODDIR/new.id) ]]; then
+		log "I" "*没有更新系统"
+	else
+		touch $MODDIR/change
+		log "I" "*更新了系统"
+	fi
+	if [ -e $MODDIR/安装或更新了模块 ]; then
+		log "I" "*刚安装或更新了本模块"
+	fi
 }
 
 function run_dex2oat(){	#运行
-	log "I" "----------开始第$count次运行！----------"
-	if [ "$system_app" != "无" ]; then
-		log "D" "----------系统应用编译模式：$system_app----------"
-		log "I" "----------开始编译系统应用！----------"
+	log "I" "*开始第$count次运行！"
+	if [[ "$system_app" != "无" && ! -z $(cmp $MODDIR/old.lists $MODDIR/new.lists) ]]; then
+		log "I" "*安装或卸载了系统应用"
+		log "D" "*系统应用编译模式：$system_app"
+		log "I" "*开始编译系统应用！"
 		source $MODDIR/mode/sapp.sh
-		log "I" "----------系统应用编译完毕！----------"
+		echo $newps >$MODDIR/old.lists
+		log "I" "*系统应用编译完毕！"
+	else
+		log "I" "*没有安装或卸载系统应用"
+		log "I" "*不执行编译"
 	fi
-	if [ "$tripartite_app" != "无" ]; then
-		log "D" "----------三方应用编译模式：$tripartite_app----------"
-		log "I" "----------开始编译三方应用！----------"
+	if [[ "$tripartite_app" != "无" && ! -z $(cmp $MODDIR/old.list3 $MODDIR/new.list3) ]]; then
+		log "I" "*安装或卸载了三方应用"
+		log "D" "*三方应用编译模式：$tripartite_app"
+		log "I" "*开始编译三方应用！"
 		source $MODDIR/mode/3app.sh
-		log "I" "----------三方应用编译完毕！----------"
+		echo $newp3 >$MODDIR/new.list3
+		log "I" "*三方应用编译完毕！"
+	else
+		log "I" "*没有安装或卸载三方应用"
+		log "I" "*不执行编译"
 	fi
-	if [ "$optional_app" != "无" ]; then
-		log "D" "----------自选应用编译模式：$optional_app----------"
-		log "I" "----------开始编译自选应用！----------"
+	if [[ "$optional_app" != "无" && ! -z $(cmp $MODDIR/old.lista $MODDIR/new.lista) ]]; then
+		log "I" "*安装或卸载了应用"
+		log "D" "*自选应用编译模式：$optional_app"
+		log "I" "*开始编译自选应用！"
 		source $MODDIR/mode/oapp.sh
-		log "I" "----------自选应用编译完毕！----------"
+		log "I" "*自选应用编译完毕！"
 	fi
 	if [[ "$system_app" = "无" && "$tripartite_app" = "无" && "$optional_app" = "无" ]]; then
-		log "W" "----------未选择应用！----------"
+		log "W" "*未选择应用！"
 	fi
-	log "I" "----------运行完毕！----------"
+	log "I" "*运行完毕！"
 }
 
 function notification_simulation(){	#通知提醒
@@ -51,7 +98,7 @@ function log_size(){
 
 function counter(){	#计数
 	count=1
-	if [ -f $MODDIR/执行次数.txt ];then
+	if [ -e $MODDIR/执行次数.txt ];then
 		count=$(cat $MODDIR/执行次数.txt)
 	fi
 }
@@ -61,24 +108,27 @@ function counter_increase(){	#计数
 	echo $count >$MODDIR/执行次数.txt
 }
 
-function deleteOK(){
-	rm -rf $MODDIR/compare/OK
+function delete_change(){
+	rm -rf $MODDIR/change
+	rm -rf $MODDIR/安装或更新了模块
 }
 
 function end(){
 	ends=$(grep -o '编译成功' /data/adb/Dex2oatRUN/日志.log | wc -l)
 	endf=$(grep -o '编译失败' /data/adb/Dex2oatRUN/日志.log | wc -l)
-	log "I" "----------本次运行结果：成功：$ends；失败：$endf----------"
+	log "I" "*本次运行结果：成功：$ends；失败：$endf"
 }
 
-if [ -f $MODDIR/compare/OK ]; then
-log_size
-counter
 read_config
+write_config
+start_compare
+log_size
+if [ -e $MODDIR/change ] || [ -e $MODDIR/安装或更新了模块 ]; then
+counter
 run_dex2oat
 notification_simulation "dex2oat模块" "编译完成！"
 counter_increase
-deleteOK
+delete_change
 end
 fi
 
