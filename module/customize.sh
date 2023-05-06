@@ -14,12 +14,12 @@ oldpa=$(pm list packages)
 oldp3=$(pm list packages -3)
 oldps=$(pm list packages -s)
 touch $MODPATH/old.id
-touch $MODDIR/old.lista
-touch $MODDIR/old.list3
-touch $MODDIR/old.lists
-echo $oldpa >$MODDIR/old.lista
-echo $oldp3 >$MODDIR/old.list3
-echo $olds >$MODDIR/old.lists
+touch $MODPATH/old.lista
+touch $MODPATH/old.list3
+touch $MODPATH/old.lists
+echo $oldpa >$MODPATH/old.lista
+echo $oldp3 >$MODPATH/old.list3
+echo $oldps >$MODPATH/old.lists
 echo $oldi >$MODPATH/old.id
 touch $MODPATH/安装或更新了模块
 
@@ -47,9 +47,9 @@ echo "#基础配置：
 定时运行=是
 #定时服务的执行时间，前面是分，后面是时，例如12点： 00 12 记得空格。
 定时执行时间=00 00
-" >"$DEX2OAT_CONFIG"
+" >$DEX2OAT_CONFIG
 echo "#自选应用列表（填包名，一行一个）：
-" >"$OPTIONALAPP_CONFIG"
+" >$OPTIONALAPP_CONFIG
 else
 echo "#基础配置：
 #可填：
@@ -64,10 +64,10 @@ echo "#基础配置：
 定时运行=$timing_operation
 #定时服务的执行时间，前面是分，后面是时，例如12点： 00 12 记得空格。
 定时执行时间=$run_time
-" >"$DEX2OAT_CONFIG"
+" >$DEX2OAT_CONFIG
 echo "#自选列表（填包名，一行一个）：
 $Optionalapp
-" >"$OPTIONALAPP_CONFIG"
+" >$OPTIONALAPP_CONFIG
 fi
 
 ui_print "- 模块会根据配置自动执行dex2oat。"

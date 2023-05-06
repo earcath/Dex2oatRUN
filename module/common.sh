@@ -7,7 +7,6 @@ function read_config(){	#读取配置
 	system_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^系统应用=" | cut -f2 -d '=')
 	tripartite_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^三方应用=" | cut -f2 -d '=')
 	optional_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^自选应用=" | cut -f2 -d '=')
-	run_time=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时执行时间=" | cut -f2 -d '=')
 	newpa=$(pm list packages)
 	newp3=$(pm list packages -3)
 	newps=$(pm list packages -s)
@@ -21,9 +20,8 @@ function write_config(){
 	touch $MODDIR/new.id
 	echo $newpa >$MODDIR/new.lista
 	echo $newp3 >$MODDIR/new.list3
-	echo $news >$MODDIR/new.lists
+	echo $newps >$MODDIR/new.lists
 	echo $newi >$MODDIR/new.id
-	echo "$run_time * * * sh ../common.sh" >$MODDIR/cron.d/root
 }
 
 function start_compare(){
@@ -36,18 +34,20 @@ function start_compare(){
 	fi
 	if [[ -z $(cmp $MODDIR/old.id $MODDIR/new.id) ]]; then
 		log "I" "*没有更新系统"
+		log "I" "*不执行编译"
 	else
 		touch $MODDIR/change
 		log "I" "*更新了系统"
 	fi
 	if [ -e $MODDIR/安装或更新了模块 ]; then
 		log "I" "*刚安装或更新了本模块"
+		log "I" "*强制进行编译"
 	fi
 }
 
 function run_dex2oat(){	#运行
 	log "I" "*开始第$count次运行！"
-	if [[ "$system_app" != "无" && ! -z $(cmp $MODDIR/old.lists $MODDIR/new.lists) ]]; then
+	if [[ "$system_app" != "无" && ! -z $(cmp $MODDIR/old.lists $MODDIR/new.lists) ]] || [[ "$system_app" != "无" && -e $MODDIR/安装或更新了模块 ]]; then
 		log "I" "*安装或卸载了系统应用"
 		log "D" "*系统应用编译模式：$system_app"
 		log "I" "*开始编译系统应用！"
@@ -55,10 +55,10 @@ function run_dex2oat(){	#运行
 		echo $newps >$MODDIR/old.lists
 		log "I" "*系统应用编译完毕！"
 	else
-		log "I" "*没有安装或卸载系统应用"
+		log "I" "*没有安装或卸载系统应用或编译模式为无"
 		log "I" "*不执行编译"
 	fi
-	if [[ "$tripartite_app" != "无" && ! -z $(cmp $MODDIR/old.list3 $MODDIR/new.list3) ]]; then
+	if [[ "$tripartite_app" != "无" && ! -z $(cmp $MODDIR/old.list3 $MODDIR/new.list3) ]] || [[ "$tripartite_app" != "无" && -e $MODDIR/安装或更新了模块 ]]; then
 		log "I" "*安装或卸载了三方应用"
 		log "D" "*三方应用编译模式：$tripartite_app"
 		log "I" "*开始编译三方应用！"
@@ -66,10 +66,10 @@ function run_dex2oat(){	#运行
 		echo $newp3 >$MODDIR/new.list3
 		log "I" "*三方应用编译完毕！"
 	else
-		log "I" "*没有安装或卸载三方应用"
+		log "I" "*没有安装或卸载三方应用或编译模式为无"
 		log "I" "*不执行编译"
 	fi
-	if [[ "$optional_app" != "无" && ! -z $(cmp $MODDIR/old.lista $MODDIR/new.lista) ]]; then
+	if [[ "$optional_app" != "无" && ! -z $(cmp $MODDIR/old.lista $MODDIR/new.lista) ]] || [[ "$optional_app" != "无" && -e $MODDIR/安装或更新了模块 ]]; then
 		log "I" "*安装或卸载了应用"
 		log "D" "*自选应用编译模式：$optional_app"
 		log "I" "*开始编译自选应用！"
