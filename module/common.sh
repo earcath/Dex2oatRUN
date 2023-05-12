@@ -7,8 +7,8 @@ function read_config(){	#读取配置
 	system_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^系统应用=" | cut -f2 -d '=')
 	tripartite_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^三方应用=" | cut -f2 -d '=')
 	optional_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^自选应用=" | cut -f2 -d '=')
-	newAPP-3=$(pm list packages -3)
-	newAPP-S=$(pm list packages -s)
+	newAPP_3=$(pm list packages -3)
+	newAPP_S=$(pm list packages -s)
 	newID=$(getprop ro.system.build.id)
 }
 
@@ -16,8 +16,8 @@ function write_config(){
 	touch $MODDIR/newapp-3.list
 	touch $MODDIR/newapp-S.list
 	touch $MODDIR/new.id
-	echo $newAPP-3 >$MODDIR/newapp-3.list
-	echo $newAPP-S >$MODDIR/newapp-S.list
+	echo $newAPP_3 >$MODDIR/newapp-3.list
+	echo $newAPP_S >$MODDIR/newapp-S.list
 	echo $newID >$MODDIR/new.id
 }
 
@@ -52,22 +52,22 @@ function run_dex2oat(){	#运行
 		log "D" "*系统应用编译模式：$system_app"
 		log "I" "*开始编译系统应用！"
 		source $MODDIR/mode/dexapp-S.sh
-		echo $newAPP-S >$MODDIR/oldapp-S.list
+		echo $newAPP_S >$MODDIR/oldapp-S.list
 		log "I" "*系统应用编译完毕！"
 	fi
 	if [[ "$tripartite_app" != "无" && -e $MODDIR/appchange-3 ]] || [[ "$tripartite_app" != "无" && -e $MODDIR/moduleupdate ]] || [[ "$tripartite_app" != "无" && -e $MODDIR/systemupdate ]]; then
 		log "D" "*三方应用编译模式：$tripartite_app"
 		log "I" "*开始编译三方应用！"
 		source $MODDIR/mode/dexapp-3.sh
-		echo $newAPP-3 >$MODDIR/oldapp-3.list
+		echo $newAPP_3 >$MODDIR/oldapp-3.list
 		log "I" "*三方应用编译完毕！"
 	fi
 	if [[ "$optional_app" != "无" && -e $MODDIR/appchange-3 ]] || [[ "$optional_app" != "无" && -e $MODDIR/appchange-S ]] || [[ "$optional_app" != "无" && -e $MODDIR/moduleupdate ]] || [[ "$optional_app" != "无" && -e $MODDIR/systemupdate ]]; then
 		log "D" "*自选应用编译模式：$optional_app"
 		log "I" "*开始编译自选应用！"
 		source $MODDIR/mode/dexapp-O.sh
-		echo $newAPP-S >$MODDIR/oldapp-S.list
-		echo $newAPP-3 >$MODDIR/oldapp-3.list
+		echo $newAPP_S >$MODDIR/oldapp-S.list
+		echo $newAPP_3 >$MODDIR/oldapp-3.list
 		log "I" "*自选应用编译完毕！"
 	fi
 	if [[ "$system_app" = "无" && "$tripartite_app" = "无" && "$optional_app" = "无" ]]; then
