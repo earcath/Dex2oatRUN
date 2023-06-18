@@ -42,7 +42,7 @@
 # 捐赠
 
 <details>
+
 [![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/afdian.png)
 ](https://afdian.net/a/linyunyun)
-<details>
 
