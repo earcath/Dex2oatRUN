@@ -16,7 +16,10 @@
 
 ## 配置
 
-- 配置及日志相关文件都在此文件夹下：`/data/adb/Dex2oatRUN`
+- 配置及日志相关文件都在此文件夹下：
+  shell```
+  /data/adb/Dex2oatRUN
+  ```
 
 ---
 
