@@ -3,7 +3,7 @@
 </div>
 
 [![Magisk](https://img.shields.io/badge/Magisk-blue?style=for-the-badge)](https://github.com/topjohnwu/Magisk)
-[![Version](https://img.shields.io/github/tag/HiiragiYunyun/Dex2oatRUN?style=for-the-badge&label=版本)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases/latest)
+[![Version](https://img.shields.io/github/tag/HiiragiYunyun/Dex2oatRUN?style=for-the-badge&label=当前版本)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases/latest)
 [![Stars](https://img.shields.io/github/stars/HiiragiYunyun/Dex2oatRUN?style=for-the-badge&label=Github%20Stars&logo=github "GitHub Repo stars")](https://github.com/HiiragiYunyun/Dex2oatRUN)
 [![Downloads](https://img.shields.io/github/downloads/HiiragiYunyun/Dex2oatRUN/total?style=for-the-badge&label=Github下载&logo=github)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)
 
