@@ -20,7 +20,7 @@
 
 ## explain
 
-According to the configuration, the module will execute dex2oat * timing or start * after * * system update * * and * * application installation * *  (it will be executed just after the module is installed).
+According to the configuration, the module will execute dex2oat *timing or start* after **system update** and **application installation**  (it will be executed just after the module is first installed).
 
 ## testing environment
 
