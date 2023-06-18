@@ -41,6 +41,6 @@
 
 # 捐赠
 
-![alt text]https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/afdian.png
+![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/afdian.png)
 [爱发电](https://afdian.net/a/linyunyun)
 
