@@ -35,13 +35,13 @@
 
 # 下载
 
-点击![(img=https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/afdian.png)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)下载。
+点击[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/afdian.png)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)下载。
 
 ---
 
 # 捐赠
 
-<details>爱发电
+<details>
 
 [![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/afdian.png)
 ](https://afdian.net/a/linyunyun)
