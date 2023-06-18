@@ -1,5 +1,5 @@
 <div align="center">
-<h1> dex编译(dex2oat) </h1>
+<b> dex编译(dex2oat) </b>
 </div>
 
 [![Magisk](https://img.shields.io/badge/Magisk-blue?style=for-the-badge)](https://github.com/topjohnwu/Magisk)
