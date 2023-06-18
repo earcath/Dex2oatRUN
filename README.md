@@ -1,4 +1,4 @@
-<div align="center" style="font-weight: bold>
+<div align="center">
 <h1>dex编译(dex2oat)</h1>
 </div>
 
