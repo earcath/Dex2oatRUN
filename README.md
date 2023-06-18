@@ -6,7 +6,7 @@
 [![Downloads](https://img.shields.io/github/downloads/HiiragiYunyun/Dex2oatRUN/total?label=Github下载&logo=github)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)
 
 [![Coolapk](https://img.shields.io/badge/酷安-柊芸芸-hotpink?logo=android)](http://www.coolapk.com/u/11696005)
-[![Afdian](https://img.shields.io/badge/爱发电-林芸芸-hotpink?logo=heart)](https://afdian.net/a/linyunyun)
+[![Afdian](https://img.shields.io/badge/爱发电-林芸芸-hotpink?logo=https://github.dev/lin-yunyun/Dex2oatRUN/blob/main/medium/afdian.png)](https://afdian.net/a/linyunyun)
 
 >这是一个magisk模块，它调用了系统中对安卓系统下应用的dex文件进行编译优化的程序。通过合理的dex2oat的编译优化，可以大大提高应用启动的速度和使用手机过程的的流畅度。
 
@@ -22,7 +22,7 @@
 
 # 下载
 
-点击[这里](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)下载。
+点击[这里(logo=https://github.dev/lin-yunyun/Dex2oatRUN/blob/main/medium/download.png)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)下载。
 
 ---
 
