@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" style="font-weight: bold"&"text-decoration:blink">
 <h0>dex编译(dex2oat)</h0>
 </div>
 
