@@ -35,7 +35,7 @@
 
 # 下载
 
-点击[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/download.png)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)下载。
+[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/download.png)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)
 
 ---
 
