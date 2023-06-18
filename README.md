@@ -1,4 +1,8 @@
-# dex编译(dex2oat)
+<div align="center">
+
+<h1>dex编译(dex2oat)</h1>
+
+</div>
 
 [![Magisk](https://img.shields.io/badge/Magisk-blue?style=flat&logo=magisk&logoColor=white)](https://github.com/topjohnwu/Magisk)
 [![Version](https://img.shields.io/github/tag/HiiragiYunyun/Dex2oatRUN?label=版本)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases/latest)
