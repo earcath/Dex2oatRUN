@@ -1,10 +1,10 @@
-<div align="center">
-<h1>dex编译(dex2oat)</h1>
-</div>
-
 <div align="right">
 <a href="/README.md">中文</a> &nbsp;|&nbsp;
 <a href="/README_en-US.md">EN</a>
+</div>
+
+<div align="center">
+<h1>dex编译(dex2oat)</h1>
 </div>
 
 [![Magisk](https://img.shields.io/badge/Magisk-blue?style=for-the-badge)](https://github.com/topjohnwu/Magisk)
