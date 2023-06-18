@@ -2,7 +2,7 @@
 <h1> dex编译(dex2oat) </h1>
 </div>
 
-[![Magisk](https://img.shields.io/badge/Magisk-blue?style=flat&logo=magisk&logoColor=white)](https://github.com/topjohnwu/Magisk)
+[![Magisk](https://img.shields.io/badge/Magisk-blue?)](https://github.com/topjohnwu/Magisk)
 [![Version](https://img.shields.io/github/tag/HiiragiYunyun/Dex2oatRUN?label=版本)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases/latest)
 [![Stars](https://img.shields.io/github/stars/HiiragiYunyun/Dex2oatRUN?label=Github%20Stars&logo=github&style=flat "GitHub Repo stars")](https://github.com/HiiragiYunyun/Dex2oatRUN)
 [![Downloads](https://img.shields.io/github/downloads/HiiragiYunyun/Dex2oatRUN/total?label=Github下载&logo=github)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)
