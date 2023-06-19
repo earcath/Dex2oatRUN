@@ -1,4 +1,4 @@
-function log(){	#日志
+function log(){
 	echo "[ $(date "+%Y-%m-%d %H:%M:%S") ] ${1}" >> /data/adb/Dex2oatRUN/日志.log
 }
 
@@ -6,14 +6,16 @@ touch ./package-3.list
 touch ./done-3.list
 touch ./black.list
 Package=$(pm list packages -3 | grep "^package:" | cut -f2 -d ':')
+rm -r ./package-3.list
 for i in $Package
 	do
-		echo "$i" >> ./package-3.list
+		echo $i >> ./package-3.list
 	done
 sort done-3.list > done-3_sorted.list
 sort package-3.list > package-3_sorted.list
-comm -23 package-3_sorted.list done-3_sorted.list > re_sult.list
-comm -23 re_sult.list black.list > result.list
+sort black.list > black_sorted.list
+comm -23 package-3_sorted.list done-3_sorted.list > result_sorted.list
+comm -23 result_sorted.list black_sorted.list > result.list
 Package=$(sed '/^#/d' "./result.list")
 
 if [ "$tripartite_app" = "verify" ]; then
