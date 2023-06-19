@@ -24,11 +24,13 @@
 
 ```
 
+</details>
+
 ---
 
 # 关于
 
-- 作者：[酷安@柊疏柚](http://www.coolapk.com/u/11696005) [GitHub@柊芸芸](https://github.com/HiiragiYunyun)
+- 作者：[酷安@柊芸芸](http://www.coolapk.com/u/11696005) [GitHub@林芸芸](https://github.com/lin-yunyun)
 
-- 模块地址：[GitHub](https://github.com/HiiragiYunyun/Dex2oatRUN)
+- 模块地址：[GitHub](https://github.com/lin-yunyun/Dex2oatRUN)
 
