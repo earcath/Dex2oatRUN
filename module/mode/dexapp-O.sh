@@ -1,80 +1,106 @@
 function log(){	#日志
-	echo "$(date "+%Y-%m-%d %H:%M:%S") [${1}] : ${2}" >>/data/adb/Dex2oatRUN/日志.log
+	echo "[ $(date "+%Y-%m-%d %H:%M:%S") ] ${1}" >> /data/adb/Dex2oatRUN/日志.log
 }
 
-Package=$(cat $OPTIONALAPP_CONFIG | grep -v '^#')
+touch ./package-O.list
+touch ./done-O.list
+touch ./black.list
+Package=$(pm list packages -O | grep "^package:" | cut -f2 -d ':')
+for i in $Package
+	do
+		echo "$i" >> ./package-O.list
+	done
+sort done-O.list > done-O_sorted.list
+sort package-O.list > package-O_sorted.list
+comm -23 package-O_sorted.list done-O_sorted.list > re_sult.list
+comm -23 re_sult.list black.list > result.list
+Package=$(sed '/^#/d' "./result.list")
 
-if [ "$optional_app" = "verify" ]; then
+if [ "$tripartite_app" = "verify" ]; then
 	for i in $Package
 		do
 			cmd package compile -m verify $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译成功！"
+				log "应用$i编译成功！"
+				echo $i >> ./done-O.list
 			else
-				log "E" "应用$i编译失败！"
+				log "应用$i编译失败！"
+				echo $i >> ./black.list
 			fi
 		done
-elif [ "$optional_app" = "quicken" ]; then
+elif [ "$tripartite_app" = "quicken" ]; then
 	for i in $Package
 		do
 			cmd package compile -m quicken $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译成功！"
+				log "应用$i编译成功！"
+				echo $i >> ./done-O.list
 			else
-				log "E" "应用$i编译失败！"
+				log "应用$i编译失败！"
+				echo $i >> ./black.list
 			fi
 		done
-elif [ "$optional_app" = "space-profile" ]; then
+elif [ "$tripartite_app" = "space-profile" ]; then
 	for i in $Package
 		do
 			cmd package compile -m space-profile $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译成功！"
+				log "应用$i编译成功！"
+				echo $i >> ./done-O.list
 			else
-				log "E" "应用$i编译失败！"
+				log "应用$i编译失败！"
+				echo $i >> ./black.list
 			fi
 		done
-elif [ "$optional_app" = "space" ]; then
+elif [ "$tripartite_app" = "space" ]; then
 	for i in $Package
 		do
 			cmd package compile -m space $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译成功！"
+				log "应用$i编译成功！"
+				echo $i >> ./done-O.list
 			else
-				log "E" "应用$i编译失败！"
+				log "应用$i编译失败！"
+				echo $i >> ./black.list
 			fi
 		done
-elif [ "$optional_app" = "speed-profile" ]; then
+elif [ "$tripartite_app" = "speed-profile" ]; then
 	for i in $Package
 		do
 			cmd package compile -m speed-profile $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译成功！"
+				log "应用$i编译成功！"
+				echo $i >> ./done-O.list
 			else
-				log "E" "应用$i编译失败！"
+				log "应用$i编译失败！"
+				echo $i >> ./black.list
 			fi
 		done
-elif [ "$optional_app" = "speed" ]; then
+elif [ "$tripartite_app" = "speed" ]; then
 	for i in $Package
 		do
 			cmd package compile -m speed $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译成功！"
+				log "应用$i编译成功！"
+				echo $i >> ./done-O.list
 			else
-				log "E" "应用$i编译失败！"
+				log "应用$i编译失败！"
+				echo $i >> ./black.list
 			fi
 		done
-elif [ "$optional_app" = "everything" ]; then
+elif [ "$tripartite_app" = "everything" ]; then
 	for i in $Package
 		do
 			cmd package compile -m everything $i
 			if [ "${?}" = "0" ]; then
-				log "I" "应用$i编译成功！"
+				log "应用$i编译成功！"
+				echo $i >> ./done-O.list
 			else
-				log "E" "应用$i编译失败！"
+				log "应用$i编译失败！"
+				echo $i >> ./black.list
 			fi
 		done
 else
-	log "E" "*配置输入有误！"
+	log "配置输入有误！"
 fi
 
