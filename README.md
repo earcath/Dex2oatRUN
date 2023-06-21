@@ -8,9 +8,9 @@
 </div>
 
 [![Magisk](https://img.shields.io/badge/Magisk-blue?style=for-the-badge)](https://github.com/topjohnwu/Magisk)
-[![Version](https://img.shields.io/github/tag/HiiragiYunyun/Dex2oatRUN?style=for-the-badge&label=当前版本)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases/latest)
-[![Stars](https://img.shields.io/github/stars/HiiragiYunyun/Dex2oatRUN?style=for-the-badge&label=Github%20Stars&logo=github "GitHub Repo stars")](https://github.com/HiiragiYunyun/Dex2oatRUN)
-[![Downloads](https://img.shields.io/github/downloads/HiiragiYunyun/Dex2oatRUN/total?style=for-the-badge&label=Github下载&logo=github)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)
+[![Version](https://img.shields.io/github/tag/lin-yunyun/Dex2oatRUN?style=for-the-badge&label=当前版本)](https://github.com/lin-yunyun/Dex2oatRUN/releases/latest)
+[![Stars](https://img.shields.io/github/stars/lin-yunyun/Dex2oatRUN?style=for-the-badge&label=Github%20Stars&logo=github "GitHub Repo stars")](https://github.com/lin-yunyun/Dex2oatRUN)
+[![Downloads](https://img.shields.io/github/downloads/lin-yunyun/Dex2oatRUN/total?style=for-the-badge&label=Github下载&logo=github)](https://github.com/lin-yunyun/Dex2oatRUN/releases)
 
 [![Coolapk](https://img.shields.io/badge/酷安-柊芸芸-hotpink?style=for-the-badge)](http://www.coolapk.com/u/11696005)
 [![Afdian](https://img.shields.io/badge/爱发电-林芸芸-hotpink?style=for-the-badge)](https://afdian.net/a/linyunyun)
@@ -40,7 +40,7 @@
 
 # 下载
 
-[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/download.png)](https://github.com/HiiragiYunyun/Dex2oatRUN/releases)
+[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/download.png)](https://github.com/lin-yunyun/Dex2oatRUN/releases)
 
 ---
 
