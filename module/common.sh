@@ -236,7 +236,7 @@ function dexapp_O(){
 	touch $MODDIR/package-O.list
 	touch $MODDIR/done-O.list
 	touch $MODDIR/black.list
-	PackageO=$(pm list packages -O | grep "^package:" | cut -f2 -d ':')
+	PackageO=$(sed '/^#/d' "$OPTIONALAPP_CONFIG")
 	rm -r $MODDIR/package-O.list
 	for i in $PackageO
 		do
