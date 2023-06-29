@@ -41,11 +41,10 @@ According to the configuration, the module will execute dex2oat *timing or start
 
 # download
 
-[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/download.png)](https://github.com/lin-yunyun/Dex2oatRUN/releases)
-
+[<img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center /> 点击前往下载页](https://github.com/lin-yunyun/Dex2oatRUN/releases)
 ---
 
 # donate
 
-Afdian：[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/afdian.png)](https://afdian.net/a/linyunyun)
+Afdian：[<img src="./.idea/love.png" width = "30" height = "30" alt="love" align=center />](https://afdian.net/a/linyunyun)
 
