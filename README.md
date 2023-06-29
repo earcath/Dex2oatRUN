@@ -40,7 +40,7 @@
 
 # 下载
 
-[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/download.png)](https://github.com/lin-yunyun/Dex2oatRUN/releases)
+[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/download.png)&size=5px](https://github.com/lin-yunyun/Dex2oatRUN/releases)
 
 ---
 
