@@ -55,7 +55,7 @@ compile_applications() {
     local app_config="$3"
 
     if [ "$app_mode" != "无" ]; then
-        log "$app_type 应用编译模式：$app_mode"
+        log "$app_type应用编译模式：$app_mode"
 
         while IFS= read -r pkg; do
             compile_package "$app_mode" "$pkg"

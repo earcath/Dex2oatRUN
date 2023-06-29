@@ -1,7 +1,7 @@
 id=Dex2oatRUN
 name=dex编译(dex2oat)
-versionCode=33
+versionCode=34
 author=林芸芸
-version=3.0.3.b6
+version=3.0.230630
 description=调用系统进行dex2oat编译，配置和日志所在文件夹：/data/adb/Dex2oatRUN
 updateJson=https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/update.json
