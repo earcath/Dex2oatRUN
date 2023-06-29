@@ -40,7 +40,7 @@
 
 # 下载
 
-[<img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center />](https://github.com/lin-yunyun/Dex2oatRUN/releases/download)
+[<img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center /> 点击前往下载页](https://github.com/lin-yunyun/Dex2oatRUN/releases)
 
 ---
 
