@@ -1,4 +1,3 @@
-MODPATH=${0%/*}
 DEX2OAT_CONFIG="/data/adb/Dex2oatRUN/基础配置.prop"
 OPTIONALAPP_CONFIG="/data/adb/Dex2oatRUN/自选应用列表.prop"
 
