@@ -46,5 +46,5 @@
 
 # 捐赠
 
-爱发电：<img src="./.idea/love.png" width = "300" height = "200" alt="love" align=center />(https://afdian.net/a/linyunyun)
+爱发电：[<img src="./.idea/love.png" width = "30" height = "30" alt="love" align=center />](https://afdian.net/a/linyunyun)
 
