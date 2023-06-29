@@ -42,6 +42,7 @@ According to the configuration, the module will execute dex2oat *timing or start
 # download
 
 [<img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center /> Click to go to the download page](https://github.com/lin-yunyun/Dex2oatRUN/releases)
+
 ---
 
 # donate
