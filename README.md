@@ -46,6 +46,6 @@
 
 # 捐赠
 
-爱发电：[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/afdian.png)
+爱发电：[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/love.png)
 ](https://afdian.net/a/linyunyun)
 
