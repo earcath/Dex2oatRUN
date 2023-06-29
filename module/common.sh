@@ -14,13 +14,13 @@ newid=$(getprop ro.system.build.id)
 newpkg=$(pm list packages | grep "^package:" | cut -f2 -d ':')
 tripartiteapp=$(pm list packages -3 | grep "^package:" | cut -f2 -d ':')
 systemapp=$(pm list packages -s | grep "^package:" | cut -f2 -d ':')
-echo "$tripartiteapp" > "$MODDIR/3app.txt"
-echo "$systemapp" > "$MODDIR/sapp.txt"
 
 > "$MODDIR/sapp.txt"
 > "$MODDIR/3app.txt"
 > "$MODDIR/new.id"
 > "$MODDIR/new.pkg"
+echo "$tripartiteapp" > "$MODDIR/3app.txt"
+echo "$systemapp" > "$MODDIR/sapp.txt"
 echo "$newid" > "$MODDIR/new.id"
 echo "$newpkg" > "$MODDIR/new.pkg"
 
@@ -31,7 +31,6 @@ if [ ! -z "$(cmp "$MODDIR/old.id" "$MODDIR/new.id")" ] || [ ! -z "$(cmp "$MODDIR
 fi
 
 # 重建日志
-rm -r "$log_file"
 > "$log_file"
 
 log() {
