@@ -42,12 +42,9 @@
 
 <img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center />
 
-[![](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/download.png)](https://github.com/lin-yunyun/Dex2oatRUN/releases)
-
 ---
 
 # 捐赠
 
-爱发电：[![alt text](https://raw.githubusercontent.com/lin-yunyun/Dex2oatRUN/main/.idea/love.png)
-](https://afdian.net/a/linyunyun)
+爱发电：<img src="./.idea/love.png" width = "300" height = "200" alt="love" align=center />(https://afdian.net/a/linyunyun)
 
