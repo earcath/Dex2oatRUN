@@ -32,7 +32,7 @@ boot_operation="${boot_operation:-是}"
 timing_operation="${timing_operation:-是}"
 run_time="${run_time:-00 00}"
 
-> "$MODPATH/update"
+> "$MODPATH/updated"
 
 #写入配置
 echo "#基础配置：

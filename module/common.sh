@@ -64,7 +64,7 @@ compile_applications() {
     fi
 }
 
-if [ -e "$MODDIR/update" ]; then
+if [ -e "$MODDIR/updated" ]; then
     # 开始执行dex2oat
     compile_applications "系统" "$system_app" "$MODDIR/sapp.txt"
     compile_applications "三方" "$tripartite_app" "$MODDIR/3app.txt"
@@ -75,7 +75,7 @@ if [ -e "$MODDIR/update" ]; then
     endf=$(grep -o '编译失败' "$log_file" | wc -l)
     log "本次运行结果：成功：$ends；失败：$endf"
 
-    rm -r "$MODDIR/update"
+    rm -r "$MODDIR/updated"
 else
     log "没有更新"
 fi
