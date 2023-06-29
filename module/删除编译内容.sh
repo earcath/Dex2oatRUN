@@ -1,20 +1,9 @@
-done_S_list="/data/adb/module/Dex2oatRUN/done-S.list"
-done_3_list="/data/adb/module/Dex2oatRUN/done-3.list"
-done_O_list="/data/adb/module/Dex2oatRUN/done-O.list"
+log_file="/data/adb/Dex2oatRUN/日志.log"
 
-PackageS=$(sed '/^#/d' "$done_S_list")
-Package3=$(sed '/^#/d' "$done_3_list")
-PackageO=$(sed '/^#/d' "$done_O_list")
+log() {
+    printf "[%s] %s\n" "$(date "+%Y-%m-%d %H:%M:%S")" "$1" >> "$log_file"
+}
 
-while IFS= read -r line; do
-    cmd package compile --reset "$line"
-done <<< "$PackageS"
+cmd package compile --reset -a
 
-while IFS= read -r line; do
-    cmd package compile --reset "$line"
-done <<< "$Package3"
-
-while IFS= read -r line; do
-    cmd package compile --reset "$line"
-done <<< "$PackageO"
-
+log "编译删除完毕"

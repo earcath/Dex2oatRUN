@@ -1,17 +1,21 @@
+MODPATH=${0%/*}
 DEX2OAT_CONFIG="/data/adb/Dex2oatRUN/基础配置.prop"
 OPTIONALAPP_CONFIG="/data/adb/Dex2oatRUN/自选应用列表.prop"
 
 #创建配置文件
-mkdir /data/adb/Dex2oatRUN
-touch "$DEX2OAT_CONFIG"
-touch "$OPTIONALAPP_CONFIG"
-touch /data/adb/Dex2oatRUN/删除编译内容（会闪退，不影响）.sh
+mkdir -p /data/adb/Dex2oatRUN
+> "$DEX2OAT_CONFIG"
+> "$OPTIONALAPP_CONFIG"
+> "/data/adb/Dex2oatRUN/删除编译内容（会闪退，不影响）.sh"
 
-cp $MODPATH/删除编译内容.sh /data/adb/Dex2oatRUN/删除编译内容（会闪退，不影响）.sh
+cp "$MODPATH/删除编译内容.sh" "/data/adb/Dex2oatRUN/删除编译内容（会闪退，不影响）.sh"
 
 oldid=$(getprop ro.system.build.id)
-touch $MODPATH/old.id
-echo $oldid > $MODPATH/old.id
+oldpkg=$(pm list packages | grep "^package:" | cut -f2 -d ':')
+> "$MODPATH/old.id"
+> "$MODPATH/old.pkg"
+echo "$oldid" > "$MODPATH/old.id"
+echo "$oldpkg" > "$MODPATH/old.pkg"
 
 #读取旧配置
 system_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^系统应用=" | cut -f2 -d '=')
@@ -22,12 +26,14 @@ timing_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时运行=" | cut -
 run_time=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时执行时间=" | cut -f2 -d '=')
 Optionalapp=$(cat "$OPTIONALAPP_CONFIG" | grep -v '^#')
 
-system_app="${system_app:-speed-profile}"
-tripartite_app="${tripartite_app:-无}"
+system_app="${system_app:-speed}"
+tripartite_app="${tripartite_app:-verify}"
 optional_app="${optional_app:-无}"
 boot_operation="${boot_operation:-是}"
 timing_operation="${timing_operation:-是}"
 run_time="${run_time:-00 00}"
+
+> "$MODPATH/update"
 
 #写入配置
 echo "#基础配置：
@@ -50,4 +56,3 @@ $Optionalapp
 
 ui_print "- 模块会根据配置自动执行dex2oat。"
 ui_print "- 配置及日志文件都在此文件夹下：/data/adb/Dex2oatBOOT"
-

@@ -8,16 +8,15 @@ timing_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时运行=" | cut -
 run_time=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时执行时间=" | cut -f2 -d '=')
 
 if [ "$boot_operation" = "是" ]; then
-	sleep 120
+    sleep 120
 
-	sh $MODDIR/common.sh
+    sh "$MODDIR/common.sh"
 fi
 
 if [ "$timing_operation" = "是" ]; then
-	echo "$run_time * * * sh ../common.sh" >$MODDIR/cron.d/root
+    echo "$run_time * * * sh $MODDIR/common.sh" > "$MODDIR/cron.d/root"
 
-	export PATH="/system/bin:/system/xbin:/vendor/bin:$(magisk --path)/.magisk/busybox:$PATH"
+    export PATH="/system/bin:/system/xbin:/vendor/bin:$(magisk --path)/.magisk/busybox:$PATH"
 
-	crond -c $MODDIR/cron.d
+    crond -c "$MODDIR/cron.d"
 fi
-
