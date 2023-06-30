@@ -25,7 +25,7 @@ echo "$newid" > "$MODDIR/new.id"
 echo "$newpkg" > "$MODDIR/new.pkg"
 
 if [ ! -z "$(cmp "$MODDIR/old.id" "$MODDIR/new.id")" ] || [ ! -z "$(cmp "$MODDIR/old.pkg" "$MODDIR/new.pkg")" ]; then
-    > "$MODDIR/update"
+    > "$MODDIR/updated"
     echo "$newid" > "$MODDIR/old.id"
     echo "$newpkg" > "$MODDIR/old.pkg"
 fi
