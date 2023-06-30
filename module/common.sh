@@ -15,6 +15,8 @@ newpkg=$(pm list packages | grep "^package:" | cut -f2 -d ':')
 tripartiteapp=$(pm list packages -3 | grep "^package:" | cut -f2 -d ':')
 systemapp=$(pm list packages -s | grep "^package:" | cut -f2 -d ':')
 
+touch "$MODDIR/old.id"
+touch "$MODDIR/old.pkg"
 > "$MODDIR/sapp.txt"
 > "$MODDIR/3app.txt"
 > "$MODDIR/new.id"

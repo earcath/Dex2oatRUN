@@ -3,18 +3,11 @@ OPTIONALAPP_CONFIG="/data/adb/Dex2oatRUN/自选应用列表.prop"
 
 #创建配置文件
 mkdir -p /data/adb/Dex2oatRUN
-> "$DEX2OAT_CONFIG"
-> "$OPTIONALAPP_CONFIG"
+touch "$DEX2OAT_CONFIG"
+touch "$OPTIONALAPP_CONFIG"
 > "/data/adb/Dex2oatRUN/删除编译内容（会闪退，不影响）.sh"
 
 cp "$MODPATH/删除编译内容.sh" "/data/adb/Dex2oatRUN/删除编译内容（会闪退，不影响）.sh"
-
-oldid=$(getprop ro.system.build.id)
-oldpkg=$(pm list packages | grep "^package:" | cut -f2 -d ':')
-> "$MODPATH/old.id"
-> "$MODPATH/old.pkg"
-echo "$oldid" > "$MODPATH/old.id"
-echo "$oldpkg" > "$MODPATH/old.pkg"
 
 #读取旧配置
 system_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^系统应用=" | cut -f2 -d '=')
@@ -31,8 +24,6 @@ optional_app="${optional_app:-无}"
 boot_operation="${boot_operation:-是}"
 timing_operation="${timing_operation:-是}"
 run_time="${run_time:-00 00}"
-
-> "$MODPATH/updated"
 
 #写入配置
 echo "#基础配置：
