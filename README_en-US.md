@@ -9,12 +9,12 @@
 
 
 [![Magisk](https://img.shields.io/badge/Magisk-blue?style=for-the-badge)](https://github.com/topjohnwu/Magisk)
-[![Version](https://img.shields.io/github/tag/lin-yunyun/Dex2oatRUN?style=for-the-badge&label=Current%20version)](https://github.com/lin-yunyun/Dex2oatRUN/releases/latest)
-[![Stars](https://img.shields.io/github/stars/lin-yunyun/Dex2oatRUN?style=for-the-badge&label=Github%20Stars&logo=github "GitHub Repo stars")](https://github.com/lin-yunyun/Dex2oatRUN)
-[![Downloads](https://img.shields.io/github/downloads/lin-yunyun/Dex2oatRUN/total?style=for-the-badge&label=Github%20downloads&logo=github)](https://github.com/lin-yunyun/Dex2oatRUN/releases)
+[![Version](https://img.shields.io/github/tag/SuxueSaMa/Dex2oatRUN?style=for-the-badge&label=Current%20version)](https://github.com/SuxueSaMa/Dex2oatRUN/releases/latest)
+[![Stars](https://img.shields.io/github/stars/SuxueSaMa/Dex2oatRUN?style=for-the-badge&label=Github%20Stars&logo=github "GitHub Repo stars")](https://github.com/SuxueSaMa/Dex2oatRUN)
+[![Downloads](https://img.shields.io/github/downloads/SuxueSaMa/Dex2oatRUN/total?style=for-the-badge&label=Github%20downloads&logo=github)](https://github.com/SuxueSaMa/Dex2oatRUN/releases)
 
 [![Coolapk](https://img.shields.io/badge/Coolapk-柊芸芸-hotpink?style=for-the-badge)](http://www.coolapk.com/u/11696005)
-[![Afdian](https://img.shields.io/badge/Afdian-林芸芸-hotpink?style=for-the-badge)](https://afdian.net/a/linyunyun)
+[![Afdian](https://img.shields.io/badge/Afdian-素雪-hotpink?style=for-the-badge)](https://afdian.net/a/Suxue_SaMa)
 
 >This is a magisk module, which calls the program in the system to compile and optimize the dex file applied under the Android system. Through reasonable compilation and optimization of dex2oat, the speed of application startup and the fluency of using mobile phone can be greatly improved.
 
@@ -41,7 +41,7 @@ According to the configuration, the module will execute dex2oat *timing or start
 
 # download
 
-[<img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center /> Click to go to the download page](https://github.com/lin-yunyun/Dex2oatRUN/releases)
+[<img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center /> Click to go to the download page](https://github.com/SuxueSaMa/Dex2oatRUN/releases)
 
 ---
 
