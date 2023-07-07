@@ -28,8 +28,6 @@
 
 </details>
 
----
-
 # 关于
 
 - 作者：[酷安@柊芸芸](http://www.coolapk.com/u/11696005) [GitHub@素雪](https://github.com/SuxueSaMa)
