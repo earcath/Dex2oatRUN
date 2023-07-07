@@ -8,12 +8,12 @@
 </div>
 
 [![Magisk](https://img.shields.io/badge/Magisk-blue?style=for-the-badge)](https://github.com/topjohnwu/Magisk)
-[![Version](https://img.shields.io/github/tag/lin-yunyun/Dex2oatRUN?style=for-the-badge&label=当前版本)](https://github.com/lin-yunyun/Dex2oatRUN/releases/latest)
-[![Stars](https://img.shields.io/github/stars/lin-yunyun/Dex2oatRUN?style=for-the-badge&label=Github%20Stars&logo=github "GitHub Repo stars")](https://github.com/lin-yunyun/Dex2oatRUN)
-[![Downloads](https://img.shields.io/github/downloads/lin-yunyun/Dex2oatRUN/total?style=for-the-badge&label=Github下载&logo=github)](https://github.com/lin-yunyun/Dex2oatRUN/releases)
+[![Version](https://img.shields.io/github/tag/SuxueSaMa/Dex2oatRUN?style=for-the-badge&label=当前版本)](https://github.com/SuxueSaMa/Dex2oatRUN/releases/latest)
+[![Stars](https://img.shields.io/github/stars/SuxueSaMa/Dex2oatRUN?style=for-the-badge&label=Github%20Stars&logo=github "GitHub Repo stars")](https://github.com/SuxueSaMa/Dex2oatRUN)
+[![Downloads](https://img.shields.io/github/downloads/SuxueSaMa/Dex2oatRUN/total?style=for-the-badge&label=Github下载&logo=github)](https://github.com/SuxueSaMa/Dex2oatRUN/releases)
 
 [![Coolapk](https://img.shields.io/badge/酷安-柊芸芸-hotpink?style=for-the-badge)](http://www.coolapk.com/u/11696005)
-[![Afdian](https://img.shields.io/badge/爱发电-林芸芸-hotpink?style=for-the-badge)](https://afdian.net/a/linyunyun)
+[![Afdian](https://img.shields.io/badge/爱发电-林芸芸-hotpink?style=for-the-badge)](https://afdian.net/a/Suxue_SaMa)
 
 >这是一个magisk模块，它调用了系统中对安卓系统下应用的dex文件进行编译优化的程序。通过合理的dex2oat的编译优化，可以大大提高应用启动的速度和使用手机过程的的流畅度。
 
@@ -40,11 +40,10 @@
 
 # 下载
 
-[<img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center /> 点击前往下载页](https://github.com/lin-yunyun/Dex2oatRUN/releases)
+[<img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center /> 点击前往下载页](https://github.com/SuxueSaMa/Dex2oatRUN/releases)
 
 ---
 
 # 捐赠
 
 [<img src="./.idea/love.png" width = "30" height = "30" alt="love" align=center /> 点击前往作者爱发电主页](https://afdian.net/a/Suxue_SaMa)
-
