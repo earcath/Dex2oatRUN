@@ -1,6 +1,6 @@
 ### 3.0.5(37)
 
-# 更新日志
+## 更新日志
 
 #### 当前版本
 
@@ -26,7 +26,7 @@
 
 </details>
 
-# 关于
+## 关于
 
 - 作者：[酷安@柊芸芸](http://www.coolapk.com/u/11696005) [GitHub@素雪](https://github.com/SuxueSaMa)
 
