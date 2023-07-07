@@ -32,7 +32,7 @@
 
 # 关于
 
-- 作者：[酷安@柊芸芸](http://www.coolapk.com/u/11696005) [GitHub@林芸芸](https://github.com/lin-yunyun)
+- 作者：[酷安@柊芸芸](http://www.coolapk.com/u/11696005) [GitHub@素雪](https://github.com/SuxueSaMa)
 
-- 模块地址：[GitHub](https://github.com/lin-yunyun/Dex2oatRUN)
+- 模块地址：[GitHub](https://github.com/SuxueSaMa/Dex2oatRUN)
 
