@@ -15,7 +15,7 @@ tripartite_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^三方应用=" | cut -f2
 optional_app=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^自选应用=" | cut -f2 -d '=')
 boot_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^开机运行=" | cut -f2 -d '=')
 timing_operation=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时运行=" | cut -f2 -d '=')
-run_time=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时执行时间=" | cut -f2 -d '=')
+run_time=$(sed '/^#/d' "$DEX2OAT_CONFIG" | grep "^定时运行时间=" | cut -f2 -d '=')
 Optionalapp=$(cat "$OPTIONALAPP_CONFIG" | grep -v '^#')
 
 system_app="${system_app:-speed}"
@@ -37,8 +37,8 @@ echo "#基础配置：
 #填：是、否
 开机运行=$boot_operation
 定时运行=$timing_operation
-#定时服务的执行时间，前面是分，后面是时，例如12点： 00 12 记得空格。
-定时执行时间=$run_time
+#定时服务的运行时间，前面是分，后面是时，例如12点： 00 12 记得空格。
+定时运行时间=$run_time
 " > "$DEX2OAT_CONFIG"
 echo "#自选列表（填包名，一行一个）：
 $Optionalapp
