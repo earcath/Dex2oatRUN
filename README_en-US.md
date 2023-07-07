@@ -47,5 +47,4 @@ According to the configuration, the module will execute dex2oat *timing or start
 
 # donate
 
-[<img src="./.idea/love.png" width = "30" height = "30" alt="love" align=center /> Click to go to the author's Afdian homepage](https://afdian.net/a/linyunyun)
-
+[<img src="./.idea/love.png" width = "30" height = "30" alt="love" align=center /> Click to go to the author's Afdian homepage](https://afdian.net/a/Suxue_SaMa)
