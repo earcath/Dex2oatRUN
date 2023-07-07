@@ -13,7 +13,7 @@
 [![Downloads](https://img.shields.io/github/downloads/SuxueSaMa/Dex2oatRUN/total?style=for-the-badge&label=Github下载&logo=github)](https://github.com/SuxueSaMa/Dex2oatRUN/releases)
 
 [![Coolapk](https://img.shields.io/badge/酷安-柊芸芸-hotpink?style=for-the-badge)](http://www.coolapk.com/u/11696005)
-[![Afdian](https://img.shields.io/badge/爱发电-林芸芸-hotpink?style=for-the-badge)](https://afdian.net/a/Suxue_SaMa)
+[![Afdian](https://img.shields.io/badge/爱发电-素雪-hotpink?style=for-the-badge)](https://afdian.net/a/Suxue_SaMa)
 
 >这是一个magisk模块，它调用了系统中对安卓系统下应用的dex文件进行编译优化的程序。通过合理的dex2oat的编译优化，可以大大提高应用启动的速度和使用手机过程的的流畅度。
 
