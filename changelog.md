@@ -26,7 +26,7 @@
 
 ## 关于
 
-- 作者：[酷安@柊芸芸](http://www.coolapk.com/u/11696005) [GitHub@素雪](https://github.com/SuxueSaMa)
+- 作者：[酷安@柊芸芸](http://www.coolapk.com/u/11696005) [GitHub@六相雪](https://github.com/six-phase-snow)
 
-- 模块地址：[GitHub](https://github.com/SuxueSaMa/Dex2oatRUN)
+- 模块地址：[GitHub](https://github.com/six-phase-snow/Dex2oatRUN)
 
