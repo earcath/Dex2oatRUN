@@ -46,4 +46,4 @@
 
 # 捐赠
 
-[<img src="./.idea/love.png" width = "30" height = "30" alt="love" align=center /> 点击前往作者爱发电主页](https://afdian.net/a/six_phase_snow)
+[<img src="./.idea/love.png" width = "30" height = "30" alt="love" align=center /> 点击前往作者爱发电主页](https://afdian.net/a/lingziely)
