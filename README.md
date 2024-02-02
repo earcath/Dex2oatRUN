@@ -1,4 +1,4 @@
-<div align="right">
+～<div align="right">
 <a href="/README.md">中文</a> &nbsp;|&nbsp;
 <a href="/README_en-US.md">EN</a>
 </div>
@@ -41,9 +41,3 @@
 # 下载
 
 [<img src="./.idea/download.png" width = "30" height = "30" alt="download" align=center /> 点击前往下载页](https://github.com/six-phase-snow/Dex2oatRUN/releases)
-
----
-
-# 捐赠
-
-[<img src="./.idea/love.png" width = "30" height = "30" alt="love" align=center /> 点击前往作者爱发电主页](https://afdian.net/a/lingziely)
